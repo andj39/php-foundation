@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 
 $container = new \App\classes\Container();
 $container->register(User::class , 'App\classes\User' );
-$container->register(\App\Interfaces\TestInterface::class,'\App\classes\Test');
+$container->register(new Test(new \App\classes\Car()),'App\Interfaces\TestInterface');
 
 $application = new \App\classes\Application($container);
 

@@ -3,8 +3,7 @@
 
 namespace App\classes;
 
-
-use App\Interfaces\ContainerInterface;
+use Psr\Container\ContainerInterface;
 
 class Application
 {
@@ -22,6 +21,8 @@ class Application
     public function run() {
         $user = $this->container->get('App\classes\User');
         $user->test();
+
+
 
     }
 
